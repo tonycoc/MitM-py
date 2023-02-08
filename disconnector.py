@@ -6,9 +6,9 @@ import time
 class Disconnector:
     
     def __init__(self, hwdst, pdst, gateway):
-        self.hwdst = hwdst
-        self.pdst = pdst
-        self.gateway = gateway
+        self.hwdst = hwdst #target MAC address
+        self.pdst = pdst #target IP
+        self.gateway = gateway #network GateWay
 
     def disconnector(self):
         print("Disconnecting!!!!")
