@@ -1,5 +1,5 @@
 # Requirements
-scapy == `2.5.5`
+scapy == `2.5.0`
 
 # Installation
 ```
