@@ -1,9 +1,8 @@
 import subprocess
 from time import sleep
-from typing import List
 import scapy.all as scapy
 import os
-import dataclasses
+
 #finding devices(targets) in the network 
 def arping():
     
