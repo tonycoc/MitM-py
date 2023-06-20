@@ -5,7 +5,7 @@ import scapy.all as scapy
 import os
 import dataclasses
 #finding devices(targets) in the network 
-def arping() -> List[str]:
+def arping():
     
     print("Please wait...")
 
@@ -29,7 +29,7 @@ def arping() -> List[str]:
         raise ValueError
 
 #MitM attack
-def arp_spoof(gateway_ifno,target_ip,target_mac,arp_res) -> None:
+def arp_spoof(gateway_ifno,target_ip,target_mac,arp_res):
     
     gateway_ip = None
     gateway_mac = None
@@ -70,12 +70,12 @@ def arp_spoof(gateway_ifno,target_ip,target_mac,arp_res) -> None:
         sleep(3)
 
 
-def gateway_Info() -> str:
+def gateway_Info():
     res = subprocess.run(["route","-n"],capture_output=True)
     res = res.stdout.decode().split("\n")
     return res
 
-def main() -> None:
+def main():
     
     #ip forwarding needs root privileges
     if os.environ["USER"] != "root":
